@@ -1,0 +1,8 @@
+node_modules/
+package.json
+package-lock.json
+.claude/
+assets/
+*.docx
+fine-lines-landing-desktop.png
+fine-lines-landing-mobile-v2.jpg
