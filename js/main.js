@@ -43,7 +43,6 @@
     'Chemical Peel',
     'Dermaplaning',
     'Gel / Cutex Pedicure',
-    'Facial Wax & Tint',
     'Not sure, please advise'
   ];
 
