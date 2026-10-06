@@ -132,3 +132,63 @@
     form.reset();
   });
 })();
+
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var TARGETS = [
+    '.trust-item',
+    '.phil-quote',
+    '.phil-body > *',
+    '.section-head > *',
+    '.svc-card',
+    '.svc-media',
+    '.brand-logo',
+    '.about-mark',
+    '.about-copy',
+    '.why-item',
+    '.faq-item',
+    '.cta .wrap > *',
+    '.map-panel'
+  ].join(',');
+  var STAGGER = 110;
+  var MAX_DELAY = 550;
+
+  function typeFor(el) {
+    if (el.matches('.svc-media, .about-mark')) return 'img';
+    if (el.matches('.faq-item, .map-panel, .brand-logo')) return 'fade';
+    return 'up';
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    var i = 0;
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      el.style.setProperty('--rd', Math.min(i++ * STAGGER, MAX_DELAY) + 'ms');
+      el.classList.add('is-in');
+      observer.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+
+  document.querySelectorAll(TARGETS).forEach(function (el) {
+    // Leave anything already on screen (e.g. restored scroll position) as-is.
+    var rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) return;
+    el.classList.add('reveal', 'reveal-' + typeFor(el));
+    observer.observe(el);
+  });
+})();
+
+(function () {
+  var logo = document.querySelector('.brandmark[href="#"]');
+  if (!logo) return;
+
+  logo.addEventListener('click', function (e) {
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  });
+})();

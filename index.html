@@ -3,19 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fine Lines Aesthetic Salon | Skincare in Worcester</title>
+    <title>Fine Lines Aesthetic Salon | Skincare in Worcester, Western Cape</title>
     <meta
       name="description"
-      content="Facial treatments built around your actual skin concern. Microneedling, chemical peel, dermaplane and pedicure in Worcester, with professional-grade Lamelle products."
+      content="Skin treatments in Worcester, Western Cape: microneedling, chemical peels, dermaplaning and pedicures, tailored to your skin with professional-grade Lamelle products."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fine Lines Aesthetic Salon" />
+    <meta property="og:locale" content="en_ZA" />
     <meta
       property="og:title"
-      content="Fine Lines Aesthetic Salon | Skincare in Worcester"
+      content="Fine Lines Aesthetic Salon | Skincare in Worcester, Western Cape"
     />
     <meta
       property="og:description"
-      content="Facial treatments built around your actual skin concern. Microneedling, chemical peel, dermaplane and pedicure in Worcester, with professional-grade Lamelle products."
+      content="Skin treatments in Worcester, Western Cape: microneedling, chemical peels, dermaplaning and pedicures, tailored to your skin with professional-grade Lamelle products."
     />
     <meta
       property="og:image"
@@ -34,16 +36,62 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Fine Lines Aesthetic Salon | Skincare in Worcester"
+      content="Fine Lines Aesthetic Salon | Skincare in Worcester, Western Cape"
     />
     <meta
       name="twitter:description"
-      content="Facial treatments built around your actual skin concern. Microneedling, chemical peel, dermaplane and pedicure in Worcester, with professional-grade Lamelle products."
+      content="Skin treatments in Worcester, Western Cape: microneedling, chemical peels, dermaplaning and pedicures, tailored to your skin with professional-grade Lamelle products."
     />
     <meta
       name="twitter:image"
       content="https://finelinesaesthetic.co.za/images/og-image.jpg"
     />
+    <link rel="canonical" href="https://finelinesaesthetic.co.za/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "@id": "https://finelinesaesthetic.co.za/#salon",
+        "name": "Fine Lines Aesthetic Salon",
+        "url": "https://finelinesaesthetic.co.za/",
+        "description": "Skin treatments in Worcester, Western Cape: microneedling, chemical peels, dermaplaning and pedicures, tailored to your skin with professional-grade Lamelle products.",
+        "image": "https://finelinesaesthetic.co.za/images/og-image.jpg",
+        "logo": "https://finelinesaesthetic.co.za/images/logo.jpg",
+        "telephone": "+27712562703",
+        "email": "rossouwmiche@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "18 Durban Street, Paglande",
+          "addressLocality": "Worcester",
+          "addressRegion": "Western Cape",
+          "postalCode": "6849",
+          "addressCountry": "ZA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.64389,
+          "longitude": 19.45117
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Worcester" },
+          { "@type": "City", "name": "Rawsonville" },
+          { "@type": "City", "name": "De Doorns" }
+        ],
+        "founder": { "@type": "Person", "name": "Michelle Rossouw", "jobTitle": "Beauty Therapist" },
+        "sameAs": ["https://www.facebook.com/finelinesaestheticsalon"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Treatments",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microneedling" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chemical Peel" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dermaplaning" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gel / Cutex Pedicure" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facial Wax & Tint" } }
+          ]
+        }
+      }
+    </script>
     <link rel="icon" href="images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,10 +104,10 @@
   <body>
     <div class="topbar">
       <div class="wrap">
-        <div class="brandmark">
-          <img src="images/logo.jpg" alt="Fine Lines Aesthetic Salon" />
+        <a class="brandmark" href="#">
+          <img src="images/logo.jpg" alt="Fine Lines Aesthetic Salon" width="320" height="320" />
           <div class="bt">Fine Lines<small>Aesthetic Salon</small></div>
-        </div>
+        </a>
         <nav class="navlinks">
           <a href="#services">Services</a>
           <a href="#why">Why Us</a>
@@ -108,6 +156,9 @@
           src="images/hero-2.jpg"
           srcset="images/hero-2-sm.jpg 1200w, images/hero-2.jpg 2400w"
           sizes="100vw"
+          width="2400"
+          height="1340"
+          fetchpriority="high"
           alt=""
         />
         <div class="hero-plaque">
@@ -193,11 +244,14 @@
             <div class="svc-media">
               <img
                 src="images/microneedling.jpg"
+                width="900"
+                height="1117"
+                loading="lazy"
                 alt="Microneedling treatment at Fine Lines Aesthetic Salon"
               />
             </div>
             <div class="svc-content">
-              <div class="svc-name">Microneedling</div>
+              <h3 class="svc-name">Microneedling</h3>
               <div class="svc-desc">
                 Microneedling is a treatment that use small needles to create
                 micro-channels in the skin, triggering your skin's natural
@@ -222,11 +276,14 @@
             <div class="svc-media">
               <img
                 src="images/chemical-peel.jpg"
+                width="900"
+                height="1117"
+                loading="lazy"
                 alt="Chemical peel treatment at Fine Lines Aesthetic Salon"
               />
             </div>
             <div class="svc-content">
-              <div class="svc-name">Chemical Peel</div>
+              <h3 class="svc-name">Chemical Peel</h3>
               <div class="svc-desc">
                 Gently exfoliates for a smoother, brighter, more even
                 complexion: pigmentation, texture and breakouts.
@@ -249,11 +306,14 @@
             <div class="svc-media">
               <img
                 src="images/dermaplane.jpg"
+                width="900"
+                height="1117"
+                loading="lazy"
                 alt="Dermaplaning treatment at Fine Lines Aesthetic Salon"
               />
             </div>
             <div class="svc-content">
-              <div class="svc-name">Dermaplaning</div>
+              <h3 class="svc-name">Dermaplaning</h3>
               <div class="svc-desc">
                 Dermaplane is a manual exfoliation procedure where a scalpel is
                 used to gently scrape away the top layer of dead skin cells and
@@ -277,11 +337,14 @@
             <div class="svc-media">
               <img
                 src="images/pedicure.jpg"
+                width="900"
+                height="1117"
+                loading="lazy"
                 alt="Gel/Cutex Pedicure treatment at Fine Lines Aesthetic Salon"
               />
             </div>
             <div class="svc-content">
-              <div class="svc-name">Gel/ Cutex Pedicure</div>
+              <h3 class="svc-name">Gel/ Cutex Pedicure</h3>
               <div class="svc-desc">
                 A Pedicure is a therapeutic treatment done for your feet that
                 shapes your toenails and treat your feet.
@@ -315,6 +378,9 @@
             src="images/lamelle-logo.webp"
             alt="Lamelle Research Laboratories"
             class="brand-logo"
+            width="200"
+            height="68"
+            loading="lazy"
           />
         </a>
       </div>
@@ -326,6 +392,9 @@
           <div class="about-mark">
             <img
               src="images/owner.jpg"
+              width="640"
+              height="640"
+              loading="lazy"
               alt="Michelle Rossouw, owner and skin therapist at Fine Lines Aesthetic Salon"
             />
           </div>
@@ -610,7 +679,7 @@
         <div class="foot-grid">
           <div class="foot-about">
             <div class="foot-brand">
-              <img src="images/logo.jpg" alt="Fine Lines Aesthetic Salon" />
+              <img src="images/logo.jpg" alt="Fine Lines Aesthetic Salon" width="320" height="320" loading="lazy" />
               <div class="ft">Fine Lines<small>Aesthetic Salon</small></div>
             </div>
             <p>
